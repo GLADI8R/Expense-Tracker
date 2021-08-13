@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { createContext, useReducer } from 'react';
 import AppReducer from './AppReducer';
 
