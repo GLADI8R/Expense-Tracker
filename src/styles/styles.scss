@@ -96,6 +96,12 @@ h4 {
     &.red {
       border-right: 5px solid #c0392b;
     }
+
+    &:hover {
+      .delete-btn {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -129,6 +135,26 @@ input[type="number"] {
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 
   &:focus {
     outline: 0;
