@@ -16,7 +16,7 @@ if(process.env.NODE_ENV === 'development') {
 }
 
 // Whenever we make a request to './api/v1/transactions', it will send us to './routes/transaction.js'
-app.use('./api/v1/transactions', transactions);
+app.use('/api/v1/transactions', transactions);
 
 
 const PORT = process.env.PORT || 5000;

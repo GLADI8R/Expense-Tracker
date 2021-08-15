@@ -34,14 +34,14 @@ export const GlobalProvider = ({ children }) => {
 		} catch (err) {
 			dispatch({
 				type: 'TRANSACTION_ERROR',
-				psyload: err.response.data.err
+				payload: err.response.data.error
 			});
 		}
 	}
 
 	async function deleteTransaction(id) {
 		try {
-			await axios.delete(`api/v1/transactions/${id}`);
+			await axios.delete(`/api/v1/transactions/${id}`);
 
 			dispatch({
 			type: 'DELETE_TRANSACTION',
@@ -50,7 +50,7 @@ export const GlobalProvider = ({ children }) => {
 		} catch (err) {
 			dispatch({
 				type: 'TRANSACTION_ERROR',
-				psyload: err.response.data.err
+				payload: err.response.data.error
 			});
 		}
 	};
@@ -63,7 +63,7 @@ export const GlobalProvider = ({ children }) => {
 		}
 
 		try {
-			const res = await axios.post('api/v1/transactions', transaction, config);
+			const res = await axios.post('/api/v1/transactions', transaction, config);
 
 			dispatch({
 			type: 'ADD_TRANSACTION',
@@ -72,7 +72,7 @@ export const GlobalProvider = ({ children }) => {
 		} catch (err) {
 			dispatch({
 				type: 'TRANSACTION_ERROR',
-				psyload: err.response.data.err
+				payload: err.response.data.error
 			});
 		}
 	};
