@@ -1,4 +1,4 @@
-# Expense-Tracker
+# Expense Tracker
 Full Stack Expense Tracker using React Hooks, Context API, MongoDB, Express
 
 ### Usage
